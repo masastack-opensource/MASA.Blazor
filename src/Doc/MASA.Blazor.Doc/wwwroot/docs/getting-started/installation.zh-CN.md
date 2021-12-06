@@ -45,8 +45,12 @@ dotnet new masab -o MasaBlazorApp
 ```sh
 $ dotnet new blazorserver -o BlazorApp
 ```
+或
+```sh
+$ dotnet new blazorwasm -o BlazorApp
+```
 
-> `blazorserver`为官方 Blazor Server App 短名称。
+> `blazorserver`为 Blazor Server App 短名称。`blazorwasm`为 Blazor WebAssembly App 短名称
 
 ## 安装 NuGet 包
 
@@ -56,7 +60,7 @@ $ dotnet add package MASA.Blazor
 
 ## 引入资源文件
 
-### Server
+### Blazor Server
 
 在 `Pages/_Host.cshtml` 中引入资源文件：
 
@@ -73,7 +77,7 @@ rel="stylesheet">
 <script src="_content/BlazorComponent/js/blazor-component.js"></script>
 ```
 
-### WebAssembly
+### Blazor WebAssembly
 
 在`wwwroot\index.html`中引入资源文件：
 

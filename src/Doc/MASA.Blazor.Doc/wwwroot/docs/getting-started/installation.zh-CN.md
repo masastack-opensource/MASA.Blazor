@@ -23,15 +23,18 @@ dotnet new --install MASA.Template
 
 ## 创建项目
 
+根据项目模板名创建项目，并指定输出目录，即项目的根文件夹。
+
 ```
 dotnet new masab -o MasaBlazorApp
 ```
 
-`-o MasaBlazorApp`指定项目创建输出目录，即项目的根文件夹。
-
 > 默认为 Server 模式，通过参数--Mode WebAssembly 创建 WebAssembly 模式项目。
 
-使用`cd MasaBlazorApp`命令切换到 `MasaBlazorApp`目录下 。`dotnet run`启动项目，打开对应网址，即可看到 MASA Blazor 模板项目的效果。
+## 启动项目
+
+通过命令`cd MasaBlazorApp`切换到 MasaBlazorApp 目录下 。
+`dotnet run`启动项目，根据程序输出打开对应网址，即可看到 MASA Blazor 模板项目的效果。
 
 # 手动创建
 
@@ -45,7 +48,7 @@ $ dotnet new blazorserver -o BlazorApp
 
 > `blazorserver`为官方 Blazor Server App 短名称。
 
-## 安装 Nuget 包
+## 安装 NuGet 包
 
 ```sh
 $ dotnet add package MASA.Blazor
@@ -62,7 +65,8 @@ $ dotnet add package MASA.Blazor
 <link href="_content/MASA.Blazor/css/masa-blazor.css" rel="stylesheet" />
 <link href="_content/MASA.Blazor/css/masa-extend-blazor.css" rel="stylesheet" />
 <!--icon file,import need to use-->
-<link href="https://cdn.jsdelivr.net/npm/@("@mdi")/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@("@mdi")/font@6.x/css/materialdesignicons.min.css"
+rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet" />
 <!--js(should lay the end of file)-->
@@ -76,7 +80,10 @@ $ dotnet add package MASA.Blazor
 ```html
 <link href="_content/MASA.Blazor/css/masa-blazor.css" rel="stylesheet" />
 <link href="_content/MASA.Blazor/css/masa-extend-blazor.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet"/>
+<link
+  href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+  rel="stylesheet"
+/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
 <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet" />
 <script src="_content/BlazorComponent/js/blazor-component.js"></script>

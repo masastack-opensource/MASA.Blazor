@@ -196,6 +196,12 @@ namespace MASA.Blazor
             }
         }
 
+        public override Task HandleOnAppendClickAsync(MouseEventArgs args)
+        {
+            Visible = true;
+            return base.HandleOnAppendClickAsync(args);
+        }
+
         protected override void SetComponentClass()
         {
             base.SetComponentClass();

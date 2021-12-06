@@ -791,7 +791,7 @@
     "Desc": "<p>Border component can wrap any content with one side border.</p>\n",
     "Order": 0,
     "OtherDocs": {},
-    "LastWriteTime": "2021-12-03T11:13:26.7334586+08:00",
+    "LastWriteTime": "2021-12-03T15:32:07.1794707+08:00",
     "DemoList": [
       {
         "Order": 0,
@@ -5046,7 +5046,7 @@
         "Name": "activePicker",
         "Title": "Active picker",
         "Description": "<p>You can create a birthday picker - starting with year picker by default, restricting dates range and closing the picker\nmenu after selecting the day make the perfect birthday picker.</p>\n",
-        "Code": "<div>\r\n    <div class=\"mb-6\">Active picker: <code> @_activePicker </code></div>\r\n    <MMenu @bind-Value=\"_menu\"\r\n           CloseOnContentClick=\"false\"\r\n           Transition=\"scale-transition\"\r\n           OffsetY\r\n           MinWidth=\"@(\"auto\")\">\r\n        <ActivatorContent>\r\n            <MTextField @bind-Value=\"_date\"\r\n                        Label=\"Birthday date\"\r\n                        PrependIcon=\"mdi-calendar\"\r\n                        Readonly\r\n                        @attributes=\"context.Attrs\"></MTextField>\r\n        </ActivatorContent>\r\n        <ChildContent>\r\n            <MDatePicker @bind-Value=\"_date\"\r\n                         ActivePicker=\"_activePicker\"\r\n                         OnActivePickerUpdate=\"val=>_activePicker=val\"\r\n                         Max=\"DateOnly.FromDateTime(DateTime.Now)\"\r\n                         Min=\"new DateOnly(1950,1,1)\"></MDatePicker>\r\n        </ChildContent>\r\n    </MMenu>\r\n</div>\r\n\r\n  @code {\r\n    private DatePickerType _activePicker = DatePickerType.Year;\r\n    private DateOnly _date = DateOnly.FromDateTime(DateTime.Now);\r\n    private bool _menu;\r\n  }\r\n",
+        "Code": "<div>\r\n    <div class=\"mb-6\">Active picker: <code> @_activePicker </code></div>\r\n    <MMenu @bind-Value=\"_menu\"\r\n           CloseOnContentClick=\"false\"\r\n           Transition=\"scale-transition\"\r\n           OffsetY\r\n           MinWidth=\"@(\"auto\")\">\r\n        <ActivatorContent>\r\n            <MTextField @bind-Value=\"_date\"\r\n                        Label=\"Birthday date\"\r\n                        PrependIcon=\"mdi-calendar\"\r\n                        Readonly\r\n                        @attributes=\"context.Attrs\"></MTextField>\r\n        </ActivatorContent>\r\n        <ChildContent>\r\n            <MDatePicker @bind-Value=\"_date\"\r\n                         ActivePicker=\"_activePicker\"\r\n                         OnActivePickerUpdate=\"val=>_activePicker=val\"\r\n                         Max=\"DateOnly.FromDateTime(DateTime.Now)\"\r\n                         OnInput=\"()=>_menu=false\"\r\n                         Min=\"new DateOnly(1950,1,1)\"></MDatePicker>\r\n        </ChildContent>\r\n    </MMenu>\r\n</div>\r\n\r\n  @code {\r\n    private DatePickerType _activePicker = DatePickerType.Year;\r\n    private DateOnly _date = DateOnly.FromDateTime(DateTime.Now);\r\n    private bool _menu;\r\n  }\r\n",
         "Type": "Demos.Components.Pickers.children.DatePickers.misc.ActivePicker",
         "Style": "",
         "Debug": false,

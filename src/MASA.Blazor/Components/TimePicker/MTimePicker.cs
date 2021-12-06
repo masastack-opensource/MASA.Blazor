@@ -369,7 +369,11 @@ namespace MASA.Blazor
         protected override void SetComponentClass()
         {
             CssProvider
-                .Apply("m-picker--time")
+                .Apply(cssBuilder =>
+                {
+                    cssBuilder
+                        .Add("m-picker--time");
+                })
                 .Apply("container", cssBuilder =>
                 {
                     cssBuilder

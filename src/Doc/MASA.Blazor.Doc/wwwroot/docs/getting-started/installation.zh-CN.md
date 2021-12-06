@@ -43,10 +43,10 @@ dotnet new masab -o MasaBlazorApp
 在命令行界面中创建名为 `BlazorApp` 的新 Blazor 应用:
 
 ```sh
-$ dotnet new blazorserver -o BlazorApp
+$ dotnet new blazorserver/blazorwasm -o BlazorApp
 ```
 
-> `blazorserver`为官方 Blazor Server App 短名称。
+> `blazorserver`为 Blazor Server App 短名称。`blazorwasm`为 Blazor WebAssembly App 短名称
 
 ## 安装 NuGet 包
 

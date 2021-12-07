@@ -36,7 +36,7 @@ dotnet new masab -o MasaBlazorApp
 
 # 手动创建
 
-> MASA 系列所有产品均基于.Net 6.0 开发,请确保已安装 [.NET 6.0](https://dotnet.microsoft.com/download/dotnet/6.0) 。
+## 创建一个 Blazor Server 项目
 
 在命令行界面中创建名为 `BlazorApp` 的新 Blazor 应用:
 
@@ -48,29 +48,12 @@ $ dotnet new blazorserver -o BlazorApp
 $ dotnet new blazorwasm -o BlazorApp
 ```
 
-或
-
-## 安装 NuGet 包
-
-```sh
-$ dotnet new blazorwasm -o BlazorApp
-```
-
 > `blazorserver`为 Blazor Server App 短名称。`blazorwasm`为 Blazor WebAssembly App 短名称
 
 ## 安装 NuGet 包
 
-```html
-<!--masa blazor css style-->
-<link href="_content/MASA.Blazor/css/masa-blazor.css" rel="stylesheet" />
-<link href="_content/MASA.Blazor/css/masa-extend-blazor.css" rel="stylesheet" />
-<!--icon file,import need to use-->
-<link href="https://cdn.jsdelivr.net/npm/@("@mdi")/font@6.x/css/materialdesignicons.min.css"
-rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
-<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet" />
-<!--js(should lay the end of file)-->
-<script src="_content/BlazorComponent/js/blazor-component.js"></script>
+```sh
+$ dotnet add package MASA.Blazor
 ```
 
 ## 引入资源文件

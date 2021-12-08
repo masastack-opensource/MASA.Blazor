@@ -171,7 +171,7 @@ namespace MASA.Blazor
 
                 Value = true;
 
-                var overlayElement = ((BDomComponentBase)Overlay.Instance).Ref;
+                var overlayElement = ((BDomComponentBase)Overlay).Ref;
                 await JsInvokeAsync(JsInteropConstants.AddElementTo, overlayElement, AttachSelector);
                 await JsInvokeAsync(JsInteropConstants.AddElementTo, ContentRef, AttachSelector);
 

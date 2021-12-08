@@ -7,7 +7,6 @@ using MASA.Blazor.Helpers;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using OneOf;
-using static MASA.Blazor.Helpers.RenderHelper;
 
 namespace MASA.Blazor
 {
@@ -69,7 +68,6 @@ namespace MASA.Blazor
 
         [CascadingParameter]
         public IThemeable Themeable { get; set; }
-
         public bool IsDark
         {
             get
@@ -92,7 +90,7 @@ namespace MASA.Blazor
 
         private string ComputedColor => Color ?? ComputedType;
 
-        private(bool, RenderFragment) ComputedIcon()
+        private (bool, RenderFragment) ComputedIcon()
         {
             if (Icon != null && Icon.IsT1 && Icon.AsT1 == false) return (false, null);
 
@@ -178,17 +176,19 @@ namespace MASA.Blazor
             AbstractProvider
                 .Apply(typeof(BAlertWrapper<>), typeof(BAlertWrapper<MAlert>))
                 .Apply(typeof(BAlertIcon<>), typeof(BAlertIcon<MAlert>))
-                .Apply<BIcon, MAlertIcon>(props =>
+                .Apply<BIcon, MIcon>(props =>
                 {
-                    props[nameof(MAlertIcon.Color)] = IconColor;
-                    props[nameof(MAlertIcon.Dark)] = IsDarkTheme;
+                    props[nameof(MIcon.Color)] = IconColor;
+                    props[nameof(MIcon.Dark)] = IsDarkTheme;
+                    props[nameof(MIcon.Class)] = "m-alert__icon";
                 })
                 .Apply(typeof(BAlertContent<>), typeof(BAlertContent<MAlert>))
                 .Apply(typeof(BAlertDismissButton<>), typeof(BAlertDismissButton<MAlert>))
-                .Apply<BButton, MAlertDismissButton>("dismissible", props =>
+                .Apply<BButton, MButton>("dismissible", props =>
                 {
-                    props[nameof(MAlertDismissButton.Color)] = IconColor;
-                    props[nameof(MAlertDismissButton.Dark)] = IsDarkTheme;
+                    props[nameof(MButton.Color)] = IconColor;
+                    props[nameof(MButton.Dark)] = IsDarkTheme;
+                    props[nameof(MButton.Class)] = "m-alert__dismissible";
                 })
                 .Apply<BIcon, MIcon>("dismissible", props => { props[nameof(MIcon.Dark)] = IsDarkTheme; });
 

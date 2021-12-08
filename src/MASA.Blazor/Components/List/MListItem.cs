@@ -90,13 +90,13 @@ namespace MASA.Blazor
 
         private void OnLocationChanged(object sender, LocationChangedEventArgs e)
         {
-            if (!IsLinkage) return;
+            //if (!IsLinkage) return;
 
-            if (MatchRoute(e.Location))
-            {
-                List?.Select(this);
-                IsActive = true;
-            }
+            //if (MatchRoute(e.Location))
+            //{
+            //    List?.Select(this);
+            //    IsActive = true;
+            //}
         }
 
         private bool MatchRoute(string path)
@@ -134,14 +134,14 @@ namespace MASA.Blazor
 
         protected override void OnAfterRender(bool firstRender)
         {
-            base.OnAfterRender(firstRender);
+            //base.OnAfterRender(firstRender);
 
-            if (List != null && List.Items.IndexOf(this) == -1)
-            {
-                List.Items.Add(this);
-            }
+            //if (List != null && List.Items.IndexOf(this) == -1)
+            //{
+            //    List.Items.Add(this);
+            //}
 
-            NavigationManager.LocationChanged += OnLocationChanged;
+            //NavigationManager.LocationChanged += OnLocationChanged;
         }
 
         protected override void OnParametersSet()

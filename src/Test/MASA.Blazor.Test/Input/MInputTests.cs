@@ -111,8 +111,8 @@ namespace MASA.Blazor.Test.Input
 
             // Assert
             Assert.AreEqual("error", cut.Instance.ValidationState);
-            Assert.IsTrue(label.Properties.ContainsKey("Color"));
-            Assert.AreEqual("error", label.Properties["Color"]);
+            Assert.IsTrue(label.Parameters.ContainsKey("Color"));
+            Assert.AreEqual("error", label.Parameters["Color"]);
         }
 
         [DataTestMethod]

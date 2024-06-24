@@ -1,0 +1,33 @@
+﻿{
+  "Title": "DataTableRowGroup",
+  "Components": [
+    "Data tables"
+  ],
+  "Props": [
+    {
+      "Name": "Value",
+      "Type": "Boolean",
+      "Default": "false",
+      "Description": ""
+    }
+  ],
+  "Contents": [
+    {
+      "Name": "ChildContent",
+      "Description": "默认插槽"
+    },
+    {
+      "Name": "ColumnHeaderContent",
+      "Description": ""
+    },
+    {
+      "Name": "RowContentContent",
+      "Description": ""
+    },
+    {
+      "Name": "RowHeaderContent",
+      "Description": ""
+    }
+  ],
+  "Events": []
+}
